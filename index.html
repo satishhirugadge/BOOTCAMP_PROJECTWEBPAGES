@@ -13,7 +13,7 @@
 </head>
 <body>
  <!--NavBar-->
- <div class="bs-example shadow-sm">
+ <div class="bs-example shadow-sm" style="padding-right: 200px;">
     <nav class="navbar navbar-expand-md navbar-light ">
       <a class="navbar-brand" href="index.html">
         <img alt="logo" src="img/logo.PNG">
@@ -27,28 +27,28 @@
 
                  <!--Home-->
                 <li class="nav-item active">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" style="font-weight: bold;" class="nav-link">Home</a>
                 </li>
 
                  <!--Offers-->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Profile</a>
+                    <a href="#" style="font-weight: bold;" class="nav-link">Profile</a>
                 </li>
 
                  <!--Restaurants-->
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Restaurants</a>
+                    <a href="#" style="font-weight: bold;" class="nav-link dropdown-toggle" data-toggle="dropdown">Restaurants</a>
                     
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Listing</a>
-                        <a href="#" class="dropdown-item">Details + Cart</a>
-                        <a href="#" class="dropdown-item">Checkout</a>
+                        <a href="listing.html" class="dropdown-item">Listing</a>
+                        <a href="Details.html" class="dropdown-item">Details + Cart</a>
+                        <a href="checkout.html " target="_blank" class="dropdown-item">Checkout</a>
                     </div>
                 </li>
 
                   <!--Pages-->
                   <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                    <a href="#" style="font-weight: bold;" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item">Track Order</a>
                         <a href="#" class="dropdown-item">Invoice</a>
@@ -61,7 +61,7 @@
 
                  <!--My Account-->
                  <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">My Account</a>
+                    <a href="#"  style="font-weight: bold;" class="nav-link dropdown-toggle" data-toggle="dropdown">My Account</a>
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item">Orders</a>
                         <a href="#" class="dropdown-item">Offers</a>
@@ -75,23 +75,28 @@
 
                    <!--Cart-->
                    <li class="nav-item dropdown"  >
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cart</a>
+                    <a href="#" style="font-weight: bold;" class="nav-link dropdown-toggle" data-toggle="dropdown">Cart</a>
                     <div class="dropdown-menu" >
                         <a href="#" class="dropdown-item"><b>Gus's World Famous Chicken</b><br>310 S Front St,Memphis, USA<br>View Full Menu</a>
 
                         <div class="dropdown-divider" ></div>
-                        <p>Chicken Tikka Sub 12"(30cm)*1        $314</p>
-                        <p>Corn & Peas Salad*1                  $209</p>
-                        <p>Veg Seekh Sub 6"(15cm)*1             $133</p>
-                        <p>Chicken Tikka Sub 12"(30cm)*1        $314</p>
-                        <p>Corn & Peas Sald*1                   $209</p>
+                        <p style="padding:10px">Chicken Tikka Sub 12"(30cm)*1        $314</p>
+                        <p style="padding:10px" >Corn & Peas Salad*1                  $209</p>
+                        <p style="padding:10px">Veg Seekh Sub 6"(15cm)*1             $133</p>
+                        <p style="padding:10px">Chicken Tikka Sub 12"(30cm)*1        $314</p>
+                        <p style="padding:10px">Corn & Peas Sald*1                   $209</p>
 
                         <div class="dropdown-divider"></div>
-                        <p>Sub Total<br>Extra charges may apply</p>
+                        <p style="padding:10px">Sub Total<br>Extra charges may apply</p>
 
                         <div class="dropdown-divider"></div>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
-                        
+
+
+                        <div class="text-center">
+                        <button type="button"  class="btn btn-secondary ">Checkout</button>
+                      </div>
+
+
                     </div>
                 </li>
             </ul>
@@ -343,7 +348,7 @@
         <hr class=" mx-auto" style="border: 2px solid rgb(100, 99, 99); width: 50px; border-radius: 10px;">
         <br><br>
         
-         <a href="#" class="btn btn-success btn-lg" style="background-color: #3ECF8E;">
+         <a href="register.html" class="btn btn-success btn-lg" style="background-color: #3ECF8E;">
               Create an Account 
            </a>
            <br><br><br><hr>
@@ -378,17 +383,32 @@
            <p style=" font-weight: bold; color: rgb(119, 116, 116)"><a class="text-info"  href="#">Register now</a> to get updates on <a href="#">Offers and Coupons</a></p>
            
            <!--google and apple-->
-           <div class="app">
+         
               <p class="mb-2" style=" font-weight: bold; color: rgb(27, 26, 26)">DOWNLOAD APP</p>
-              
-              <a href="#">
-              <img  style="border-radius: 4px;" class="img-fluid" src="img/google.PNG">
+<!--music -->
+              <a >
+              <img onclick="togglePlay()" style="border-radius: 4px;" class="img-fluid" src="img/google.PNG">
               </a>
+
+              <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+              </audio>
+
+              <script>
+                var myAudio = document.getElementById("myAudio");
+
+               function togglePlay() {
+                 return myAudio.paused ? myAudio.play() : myAudio.pause();
+                  };
+              </script>
+
+
               
-              <a href="#">
+<!--to apple store-->
+
+              <a href="https://www.apple.com/iphone/" target="_blank">
               <img style="border-radius: 4px;" class="img-fluid" src="img/apple.PNG">
               </a>
-           </div>
+           
 
 
         </div>
